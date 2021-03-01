@@ -12,7 +12,12 @@ public class DicePair
     private int roll; //Allows roll variable to pass between classes
     private int roll2;
     /*
-     * Flip this coin by randomly choosing a face value
+     * Constructor creates dicepair
+     */
+    public DicePair(){
+    }
+    /*
+     * Rolls dice by choosing random values between 1-6
      */
     public void rollDice(){
     roll = (int) (Math.random() * (6 - 1 + 1) + 1);
