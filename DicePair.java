@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 /**
  * Creates a Dice pair object
  *
@@ -27,9 +27,11 @@ public class DicePair
     /**
      * returns the rollSum
      */
-    public int[] getFace()
+    public ArrayList<Integer> getFace()
     {
-        int[] faces = {roll, roll2, roll + roll2}; 
+        
+        ArrayList<Integer> faces = new ArrayList<Integer>();
+        faces.add(roll); faces.add(roll2); faces.add(roll + roll2);
         return faces;
     }
 }
