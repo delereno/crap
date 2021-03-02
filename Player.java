@@ -13,30 +13,41 @@ public class Player
     private boolean canAfford;
     private int bal = 1000; //Current gambling balance
     private int amountBet = 0; //The amount that the player bets for the round
-    // Constructor for player objects
-    public Player(String playerName){
+    /** Constructor for player objects
+     * @param playerName name of player
+     */
+    public Player(String playerName) {
         name = playerName;
     }
     /**
-     * returns the player name
+     * @return player name
      */
     public String getName()
     {
         return name;
     }
     /**
-     * returns the player balance
+     * @return the player balance
      */
-    public int getBal()
-    {
+    public int getBal() {
         return bal;
     }
     /**
      * checks if the player can afford their bet, if they can returns true
+     * @param betAmount the amount bet
+     * @return true if the player can afford the bet
      */
     public boolean checkBal(int betAmount)
     {
         return (betAmount <= bal);
+    }
+    /**
+     * updates the player's balance
+     * @param addBet the amount won / lost by the player
+     */
+    public void updateBal(int addBet)
+    {
+        bal += addBet;
     }
     /**
      * sets the player's bet as 'pass'
@@ -47,32 +58,26 @@ public class Player
     }
     /**
      * checks if player bet on pass
+     * @return true if they bet pass
      */
-    public boolean checkPass()
-    {
+    public boolean checkPass() {
         return pass;
     }
     /**
      * sets the amount bet by the player
+     * @param betAmount the amount bet by player
      */
-    public void setBet(int betAmount)
-    {
+    public void setBet(int betAmount) {
         amountBet = betAmount;
     }
     /**
-     * returns bet amount
+     * @return bet amount
      */
     public int checkBet()
     {
         return amountBet;
     }
-    /**
-     * updates the player's balance
-     */
-    public void updateBal(int addBet)
-    {
-        bal += addBet;
-    }
+    
     
     
 }
