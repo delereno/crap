@@ -7,18 +7,20 @@ import java.util.ArrayList;
  */
 public class Dice {
     // fields (instance variables)
-    private int face; //Current side showing
     private int roll; //Allows roll variable to pass between classes
+    private final int MIN = 1;
+    private final int MAX = 6;
     /**
      * Constructor creates dicepair
      */
-    public Dice() { 
+    public Dice() {
+        rollDice();
     }
     /**
      * Rolls dice by choosing random values between 1-6
      */
     public void rollDice() {
-        roll = (int) (Math.random() * 6 + 1);
+        roll = (int) (Math.random() * MAX + MIN);
     }
     
     /**

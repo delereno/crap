@@ -1,5 +1,7 @@
-import java.util.ArrayList; import java.util.concurrent.TimeUnit; 
-import java.util.Scanner; import java.util.Collections;
+import java.util.ArrayList; 
+import java.util.concurrent.TimeUnit; 
+import java.util.Scanner; 
+import java.util.Collections;
 /**
  * Driver class that creates the craps game, using DicePair and Player objects
  * Will roll dice, and end the turn if the sum is 7,11,2,3 or 12  
@@ -104,8 +106,6 @@ public class Craps
             boolean pass = true;
             Dice dice1 = new Dice();
             Dice dice2 = new Dice();
-            dice1.rollDice();
-            dice2.rollDice();
             ArrayList<Integer> faces = new ArrayList<Integer>();
             faces.add(dice1.getFace());
             faces.add(dice2.getFace());
