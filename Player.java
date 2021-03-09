@@ -13,12 +13,14 @@ public class Player
     private boolean canAfford;
     private int bal = 1000; //Current gambling balance
     private int amountBet = 0; //The amount that the player bets for the round
+    
     /** Constructor for player objects
      * @param playerName name of player
      */
     public Player(String playerName) {
         name = playerName;
     }
+    
     /**
      * @return player name
      */
@@ -26,12 +28,14 @@ public class Player
     {
         return name;
     }
+    
     /**
      * @return the player balance
      */
     public int getBal() {
         return bal;
     }
+    
     /**
      * checks if the player can afford their bet, if they can returns true
      * @param betAmount the amount bet
@@ -41,6 +45,7 @@ public class Player
     {
         return (betAmount <= bal);
     }
+    
     /**
      * updates the player's balance
      * @param addBet the amount won / lost by the player
@@ -49,6 +54,7 @@ public class Player
     {
         bal += addBet;
     }
+    
     /**
      * sets the player's bet as 'pass'
      */
@@ -56,6 +62,7 @@ public class Player
     {
         pass = true;
     }
+    
     /**
      * checks if player bet on pass
      * @return true if they bet pass
@@ -63,6 +70,7 @@ public class Player
     public boolean checkPass() {
         return pass;
     }
+    
     /**
      * sets the amount bet by the player
      * @param betAmount the amount bet by player
@@ -70,6 +78,7 @@ public class Player
     public void setBet(int betAmount) {
         amountBet = betAmount;
     }
+    
     /**
      * @return bet amount
      */

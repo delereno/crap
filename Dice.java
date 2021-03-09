@@ -8,14 +8,16 @@ import java.util.ArrayList;
 public class Dice {
     // fields (instance variables)
     private int roll; //Allows roll variable to pass between classes
-    private final int MIN = 1;
-    private final int MAX = 6;
+    private static final int MIN = 1;
+    private static final int MAX = 6;
+    
     /**
      * Constructor creates dicepair
      */
     public Dice() {
         rollDice();
     }
+    
     /**
      * Rolls dice by choosing random values between 1-6
      */
